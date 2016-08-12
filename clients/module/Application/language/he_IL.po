@@ -1,0 +1,627 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Infoshare\n"
+"POT-Creation-Date: 2016-07-12 14:05+0530\n"
+"PO-Revision-Date: 2016-07-23 21:56+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.8\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: translate\n"
+"X-Poedit-SearchPath-0: C:/wamp/www/php/infoshare/module/Application/view\n"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:10
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:12
+#: C:\wamp\www\php\infoshare\module\Application\view/application/index/index.phtml:10
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:11
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:10
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:10
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:33
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:10
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:13
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:13
+#: C:\wamp\www\php\infoshare\module\Application\view/layout/menu.phtml:10
+msgid "Search Data"
+msgstr "חיפוש"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:11
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:10
+#: C:\wamp\www\php\infoshare\module\Application\view/application/index/index.phtml:8
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:12
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:8
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:11
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:34
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:11
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:11
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:11
+#: C:\wamp\www\php\infoshare\module\Application\view/layout/menu.phtml:8
+msgid "Loan"
+msgstr "הלוואה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:12
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:70
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:11
+#: C:\wamp\www\php\infoshare\module\Application\view/application/index/index.phtml:9
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:13
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:9
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:12
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:35
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:12
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:12
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:12
+#: C:\wamp\www\php\infoshare\module\Application\view/layout/menu.phtml:9
+msgid "Discounting"
+msgstr "נכיון"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:13
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:13
+#: C:\wamp\www\php\infoshare\module\Application\view/application/index/index.phtml:11
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:14
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:11
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:13
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:36
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:13
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:28
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:14
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:14
+#: C:\wamp\www\php\infoshare\module\Application\view/layout/menu.phtml:11
+msgid "Support"
+msgstr "תמיכה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:14
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:14
+#: C:\wamp\www\php\infoshare\module\Application\view/application/index/index.phtml:12
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:15
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:12
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:14
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:29
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:37
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:14
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:15
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:15
+#: C:\wamp\www\php\infoshare\module\Application\view/layout/menu.phtml:12
+msgid "Reporting"
+msgstr "דיווח"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:29
+msgid "New Check Discounting"
+msgstr "נכיון חדש"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:31
+msgid "View Check Discounting"
+msgstr "הצג נכיון"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:43
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:64
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:39
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:62
+msgid "ID/LLC"
+msgstr "ח.פ / ת.ז"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:55
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:56
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:160
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:191
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:52
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:83
+msgid "Name"
+msgstr "שם"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:82
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:244
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:112
+msgid "Comments"
+msgstr "הערות"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:83
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:135
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:113
+msgid "Due Date"
+msgstr "תאריך פרעון"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:84
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:62
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:96
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:114
+msgid "Amount"
+msgstr "סכום"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:103
+msgid "Save"
+msgstr "שמירה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:104
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:260
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:106
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:204
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:54
+msgid "Clear"
+msgstr "נקה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:109
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:265
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:111
+msgid "BACK"
+msgstr "חזרה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:124
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:278
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:125
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:218
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:69
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:83
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:65
+msgid "Confirmation"
+msgstr "אישור"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:127
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:281
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:128
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:221
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:72
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:86
+msgid "Do you want to clear changes you made to document before closing?"
+msgstr "האם למחוק נתונים ללא שמירה ?"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:128
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:282
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:129
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:222
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:73
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:87
+msgid "If you don't save, your changes will be lost"
+msgstr "אם לא תשמור, השינויים שלך יאבדו"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:131
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:285
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:132
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:225
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:76
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:90
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:73
+msgid "YES"
+msgstr "כן"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:132
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:286
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:133
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:226
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:77
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:91
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:72
+msgid "NO"
+msgstr "לא נמצאו תוצאות"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:149
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:109
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:263
+msgid "Display"
+msgstr "לְהַצִיג"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:149
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:109
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:263
+msgid "entries"
+msgstr "רשומות"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:150
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:110
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:264
+msgid "No data found"
+msgstr "לא נמצאו תוצאות"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:151
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:111
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:265
+msgid "Showing page"
+msgstr "מציג"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:152
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:112
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:266
+msgid "filtered from"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:152
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:112
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:266
+msgid "total records"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:154
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:268
+msgid "Previous"
+msgstr "קודם"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:155
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:269
+msgid "Next"
+msgstr "הבא"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:163
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:415
+msgid "Please enter a date in the format dd/mm/yyyy"
+msgstr "אנא הכנס תאריך בפורמט dd/mm/yyyy"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/discounting/index.phtml:170
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:436
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:170
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:288
+msgid "Please enter LLC Number"
+msgstr "אנא הכנס ת.ז. או ח.פ."
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:28
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:13
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:16
+#: C:\wamp\www\php\infoshare\module\Application\view/layout/menu.phtml:13
+msgid "History"
+msgstr "היסטוריה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:39
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:65
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:117
+msgid "Type"
+msgstr "סוג"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:41
+msgid "All"
+msgstr "את כל"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:61
+msgid "Create Date"
+msgstr "תאריך יצירה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/history/index.phtml:63
+msgid "Date"
+msgstr "תאריך"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/index/index.phtml:15
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:15
+#: C:\wamp\www\php\infoshare\module\Application\view/layout/header.phtml:24
+msgid "Dashboard"
+msgstr "ראשי"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/index/index.phtml:16
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:16
+#: C:\wamp\www\php\infoshare\module\Application\view/layout/header.phtml:25
+msgid "Logout"
+msgstr "יציאה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/index/index.phtml:26
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:26
+#: C:\wamp\www\php\infoshare\module\Application\view/layout/header.phtml:19
+msgid "Welcome"
+msgstr "ברוך הבא"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/index/index.phtml:34
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:34
+msgid "NBFI System"
+msgstr "קרדיט - מערכת שיתוף מידע"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:30
+msgid "New Loan"
+msgstr "הלוואה חדשה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:32
+msgid "View Loan"
+msgstr "הצג הלוואה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:43
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:147
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:177
+msgid "ID"
+msgstr ".ת.ז"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:69
+msgid "Phone"
+msgstr "טלפון"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:121
+msgid "Start Date"
+msgstr "תאריך יצירה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:142
+msgid "Surety"
+msgstr "ערבים"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:259
+#: C:\wamp\www\php\infoshare\module\Application\view/application/report/index.phtml:105
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:66
+msgid "SAVE"
+msgstr "שמירה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:437
+msgid "Please enter due amount"
+msgstr "אנא הכנס תאריך פרעון"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:438
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:440
+msgid "Please enter only digits"
+msgstr "מספרים בלבד"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loan/index.phtml:439
+msgid "Please enter phone number"
+msgstr "חסר מספר טלפון"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loginfront/index.phtml:27
+msgid "Please Login To Enter"
+msgstr "אנא התחבר"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loginfront/index.phtml:34
+msgid "Enter Email ID"
+msgstr "הזן כתובת אימייל"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loginfront/index.phtml:38
+msgid "Enter Password"
+msgstr "הזן סיסמא"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loginfront/index.phtml:43
+msgid "Remember Me"
+msgstr "זכור אותי"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loginfront/index.phtml:46
+msgid "Login"
+msgstr "כניסה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loginfront/index.phtml:65
+msgid "Please enter email"
+msgstr "נא להזין את הדוא\"ל"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/loginfront/index.phtml:66
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:112
+msgid "Please enter password"
+msgstr "חסר סיסמא"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:41
+msgid "Currency rates"
+msgstr "שערים"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:47
+msgid "RSS FEED"
+msgstr "חדשות"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:51
+msgid "Consumer and market share"
+msgstr "נתח לצרכן בשוק"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:53
+msgid "Accountability"
+msgstr "דין וחשבון"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/main/index.phtml:55
+msgid "Wall Street and world markets"
+msgstr "וול סטריט ושוקי עולם"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:51
+msgid "Search"
+msgstr "חיפוש"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:92
+msgid "Search in last 30days"
+msgstr "חיפושים בחודש"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:96
+msgid "Search in last 7days"
+msgstr "חיפושים בשבוע"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:100
+msgid "# Offices"
+msgstr "מספר משרדים"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:110
+msgid "Guarantor 2"
+msgstr "ערב 2"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:111
+msgid "Guarantor 1"
+msgstr "ערב 1"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:115
+msgid "Inserted Date"
+msgstr "תאריך הוספה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:116
+msgid "LLC Number"
+msgstr "ח.פ / ת.ז"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:157
+msgid "Reporting Comments"
+msgstr "הערות"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:171
+msgid "Office reported"
+msgstr "משרד דיווח"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:196
+msgid "No reporting comments yet."
+msgstr "אין דיווח"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/search/index.phtml:205
+msgid "Print"
+msgstr "הדפסה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:37
+msgid "Subject"
+msgstr "נושא"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:47
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:60
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:84
+#: C:\wamp\www\php\infoshare\module\Application\view/error/index.phtml:15
+#: C:\wamp\www\php\infoshare\module\Application\view/error/index.phtml:39
+msgid "Message"
+msgstr "הודעה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:53
+msgid "Send"
+msgstr "שלח"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:90
+msgid "Please enter subject"
+msgstr "הכנס נושא"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/support/index.phtml:91
+msgid "Please enter message"
+msgstr "הזן הודעה"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:30
+msgid "New User"
+msgstr "משתמש חדש"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:32
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:30
+msgid "View User"
+msgstr "הצג משתמש"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:42
+msgid "User Name"
+msgstr "שם"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:50
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:40
+msgid "Email"
+msgstr "אימייל "
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:58
+msgid "Password"
+msgstr "הזן סיסמא"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:69
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:28
+msgid "Delete User"
+msgstr "מחק משתמש"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:110
+msgid "Please enter User Name"
+msgstr "הכנס שם משתמש"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/index.phtml:111
+msgid "Please enter email id"
+msgstr "הכנס כתובת אימייל"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:48
+msgid "DELETE"
+msgstr "מחק"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:51
+msgid "Add User"
+msgstr "משתמש חדש"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/application/user/user-delete.phtml:69
+msgid "User will permanent delete are you sure ?"
+msgstr "האם אתה בטוח למחוק את משתמש זה ?"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:1
+msgid "A 404 error occurred"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:10
+msgid "The requested controller was unable to dispatch the request."
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:13
+msgid ""
+"The requested controller could not be mapped to an existing controller class."
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:16
+msgid "The requested controller was not dispatchable."
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:19
+msgid "The requested URL could not be matched by routing."
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:22
+msgid "We cannot determine at this time why a 404 was generated."
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:34
+msgid "Controller"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:41
+#, php-format
+msgid "resolves to %s"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:53
+#: C:\wamp\www\php\infoshare\module\Application\view/error/index.phtml:8
+msgid "Additional information"
+msgstr "מידע נוסף"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:56
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:80
+#: C:\wamp\www\php\infoshare\module\Application\view/error/index.phtml:11
+#: C:\wamp\www\php\infoshare\module\Application\view/error/index.phtml:35
+msgid "File"
+msgstr "קובץ"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:64
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:88
+#: C:\wamp\www\php\infoshare\module\Application\view/error/index.phtml:19
+#: C:\wamp\www\php\infoshare\module\Application\view/error/index.phtml:43
+msgid "Stack trace"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:74
+#: C:\wamp\www\php\infoshare\module\Application\view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr "קודם"
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/404.phtml:103
+#: C:\wamp\www\php\infoshare\module\Application\view/error/index.phtml:58
+msgid "No Exception available"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Application\view/error/index.phtml:1
+msgid "An error occurred"
+msgstr ""
+
+#, fuzzy
+#~ msgid "Please enter a date in the format"
+#~ msgstr "אנא הכנס תאריך פרעון"
+
+#~ msgid ""
+#~ "Customer was searched by more than 5 different offices in the last 7 days"
+#~ msgstr "על הלקוח נערך חיפוש על ידי 5 משרדים לפחות בשבוע האחרון "
+
+#~ msgid "This field is required."
+#~ msgstr "זהו שדה חובה."
+
+#~ msgid "Payments"
+#~ msgstr "תשלומים"
+
+#~ msgid "LOAN"
+#~ msgstr "הלוואה"
+
+#~ msgid "DISCOUNTING"
+#~ msgstr "נכיון"
+
+#~ msgid "SEARCH"
+#~ msgstr "חיפוש"
+
+#~ msgid "SUPPORT"
+#~ msgstr "תמיכה"
+
+#~ msgid "REPORTING"
+#~ msgstr "דיווח"
+
+#~ msgid "HISTORY"
+#~ msgstr "היסטוריה"
+
+#~ msgid "There is no record found"
+#~ msgstr "לא נמצאו תוצאות"
+
+#, fuzzy
+#~ msgid "Total Amount"
+#~ msgstr "סכום"
+
+#, fuzzy
+#~ msgid "No. of Payments"
+#~ msgstr "תשלומים"

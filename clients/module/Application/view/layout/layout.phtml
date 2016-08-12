@@ -1,0 +1,59 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+    <head>
+		<!--  Version:-  20160726c   -->
+        <meta charset="utf-8">
+        <?php echo $this->headTitle('T.O.I' . $this->translate(''))->setSeparator(' - ')->setAutoEscape(false) ?>
+
+        <?php
+        echo $this->headMeta()
+                ->appendName('viewport', 'width=device-width, initial-scale=1.0')
+                ->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+        ?>
+ 
+        <!-- Le styles -->
+        <?php
+        echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath() . '/img/favicon.ico'))
+                ->prependStylesheet($this->basePath() . '/public/frontend/css/font-awesome.css')
+                ->prependStylesheet($this->basePath() . '/public/frontend/css/style.css')
+                ->prependStylesheet($this->basePath() . '/public/frontend/css/bootstrap.css')
+                ->prependStylesheet($this->basePath() . '/public/frontend/css/dataTables.bootstrap.min.css')
+                ->prependStylesheet($this->basePath() . '/public/frontend/css/bootstrap.min.css')
+                ->prependStylesheet($this->basePath() . '/public/css/datepicker.css')
+        ?>
+
+        <!-- Scripts -->
+        <?php
+        echo $this->headScript()
+                ->prependFile($this->basePath() . '/public/frontend/js/bootstrap-datepicker.js')
+                ->prependFile($this->basePath() . '/public/frontend/js/dataTables.bootstrap.min.js')
+                ->prependFile($this->basePath() . '/public/frontend/js/jquery.dataTables.min.js')
+                ->prependFile($this->basePath() . '/public/frontend/js/bootstrap.js')
+                ->prependFile($this->basePath() . '/public/js/jquery-ui.js')
+                ->prependFile($this->basePath() . '/public/frontend/js/jquery-1.11.1.js')
+
+        ;
+        ?>
+
+    </head>
+    <body>
+        <?php include "header.phtml"; ?>
+        <?php //include "menu.phtml"; ?>
+
+        <!-- MENU SECTION END-->
+          
+        <div class="main-wrapper">
+          
+          
+  <?php echo $this->content; ?>
+
+  <?php include('messages.phtml'); ?>        </div>
+         
+        <?php include "footer.phtml"; ?>
+        <?php echo $this->inlineScript() ?>
+        <?php
+//        echo $this->headScript()
+//                ->prependFile($this->basePath() . '/public/frontend/js/bootstrap.js')
+        ?>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+<?php
+$this->headScript()
+        ->offsetSetFile(97, $this->basePath() . '/public/js/jquery.validate.min.js');
+?>
+<section class="menu-section">   
+    <div class="container">   
+        <div class="row">     
+            <div class="col-md-12">      
+                <div class="navbar-collapse collapse ">      
+                    <ul id="menu-top" class="nav navbar-nav navbar-right">       
+                        <li><a href="<?php echo $this->url("loan"); ?>"><?php echo $this->translate("Loan"); ?></a></li> 
+                        <li><a href="<?php echo $this->url("discounting"); ?>"><?php echo $this->translate("Discounting"); ?></a></li>  
+                        <li><a href="<?php echo $this->url("search"); ?>"><?php echo $this->translate("Search Data"); ?></a></li>
+                        <li><a href="<?php echo $this->url("support"); ?>"><?php echo $this->translate("Support"); ?></a></li>        
+                        <li><a href="<?php echo $this->url("report"); ?>"><?php echo $this->translate("Reporting"); ?></a></li>   
+                    <!--<li><a href="<?php //echo $this->url("history"); ?>"><?php //echo $this->translate("History"); ?></a></li>-->
+                        <hr class="no-display">
+                        <li class="no-display"><a href="<?php echo $this->url("loginfront", array("action" => "logout")) ?>">Logout</a></li>    
+                    </ul>     
+                </div>    
+            </div>   
+        </div> 
+    </div>
+</section>
+<div class="content-wrapper">  
+    <div class="container">   
+        <div class="row">    
+            <div class="col-md-12">
+                <?php if (empty($data)) { ?>
+                    <h4 class="page-head-line"><?php echo $this->translate("New User"); ?></h4>  
+                <?php } else { ?>
+                    <h4 class="page-head-line"><?php echo $this->translate("View User"); ?></h4>  
+                <?php } ?>
+            </div>  
+        </div>    
+        <div class="row">    
+            <div class="col-md-12 col-lg-12">   
+                <form class="user_form" id="user_form" action="<?php echo $this->url("user", array("action" => "userpost")) ?>" method="post">   
+                    <div class="form-group">          
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-box-big">    
+                                <label><?php echo $this->translate("User Name"); ?></label>    
+                                <input type="text" class="form-control"  name="user_fullname" />
+                            </div> 
+                        </div>
+                    </div>    
+                    <div class="form-group"> 
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-box-big">    
+                                <label><?php echo $this->translate("Email"); ?></label>    
+                                <input type="email" class="form-control"  name="user_email" />
+                            </div>         
+                        </div>           
+                    </div>
+                    <div class="form-group"> 
+                        <div class="row">
+                            <div class="col-md-12 col-lg-12 col-box-big">    
+                                <label><?php echo $this->translate("Password"); ?></label>    
+                                <input type="password" class="form-control"  name="user_password" />
+                            </div>         
+                        </div>           
+                    </div>
+                    <div class="form-group"> 
+                        <div class="row">
+                            <div class="col-md-2 col-lg-2 col-box-small">
+                                <input type="submit" name="submit" class="btn submit-but" value="<?php echo $this->translate('SAVE'); ?>">     
+                            </div>
+                            <div class="col-md-2 col-lg-2 col-box-small">    
+                                <a href="<?php echo $this->url("user", array("action" => "userDelete")); ?>"><?php echo $this->translate("Delete User") ?></a>
+                            </div>  
+                        </div> 
+                    </div>     
+                </form>      
+            </div>   
+        </div>   
+    </div>
+</div>
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"><?php echo $this->translate("Confirmation"); ?></h4>
+            </div>
+            <div class="modal-body">
+                <p><?php echo $this->translate("Do you want to clear changes you made to document before closing?"); ?></p>
+                <p class="text-warning"><small><?php echo $this->translate("If you don't save, your changes will be lost"); ?>.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="clear_btnn" data-dismiss="modal"><?php echo $this->translate("YES"); ?></button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal"><?php echo $this->translate("NO"); ?></button>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    jQuery(document).ready(function () {
+
+        jQuery("#user_form").validate({
+            rules: {
+                user_fullname: {required: true},
+                user_email: {
+                    required: true,
+                    email: true
+                },
+                user_password: {required: true},
+            },
+            messages: {
+                user_fullname: "<?php echo $this->translate('Please enter User Name');?>",
+                user_email: "<?php echo $this->translate('Please enter email id');?>",
+                user_password: "<?php echo $this->translate('Please enter password');?>"
+            }
+        });
+        jQuery('#user_form').on('keyup keypress', function (e) {
+            var keyCode = e.keyCode || e.which;
+            if (keyCode === 13) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+
+        jQuery('.clear').click(function () {
+            jQuery("#myModal")
+                    .modal({backdrop: 'static', keyboard: true, show: true})
+                    .one('click', '#clear_btnn', function (e) {
+                        jQuery('#user_form')[0].reset();
+                    });
+        });
+
+    });
+</script>

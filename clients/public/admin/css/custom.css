@@ -1,0 +1,80 @@
+body {
+    font-size:14px;
+}
+body.login-page{background-color:#424A5D}
+.black-bg {
+	background: #ad103c;
+	border-bottom: 1px solid #960F37;
+}
+.sidebar-toggle-box {color:#FFF !important}
+ul.top-menu > li > .logout {
+	background: #424A5D;
+	border: 1px solid #262A35 !important;
+}
+ul.sidebar-menu li a.active, ul.sidebar-menu li a:hover, ul.sidebar-menu li a:focus {
+	background: #ad103c;
+}
+.form-login h2.form-login-heading {
+background: #ad103c;
+}
+.btn-theme
+{
+background-color:#ad103c;
+border-color:#960F37
+}
+.form-control:focus{
+border-color:#ad103c !important
+}
+.btn-theme:hover,
+.btn-theme:focus,
+.btn-theme:active,
+.btn-theme.active,
+.open .dropdown-toggle.btn-theme {
+  color: #fff;
+  background-color: #960F37;
+  border-color: #960F37;
+}
+form label.error{color:#960f37}
+ul.sidebar-menu li a{font-size:14px;}
+ul.sidebar-menu li ul.sub li a{font-size:13px;}
+
+.list-form-panel {margin:0 10px}
+
+.form-builder-body .legend a{float:right}
+.form-builder-body li{list-style:none}
+.form-builder-body #select_option{margin-bottom:20px}
+.ol_opt_sortable input[type="radio"]{float:left !important}
+.ol_opt_sortable input[type="text"]{float:none !important}
+
+.form-horizontal.style-form .form-group{margin-bottom:0 !important}
+
+.add_new_license_row{float:right;}
+.add_new_license_row .btn-default{ font-weight:bold;}
+
+table td.delete, table td.delete a{text-align:center;}
+#add_new_license, #add_new_insurance{display:none}
+.message-title {margin-top:10px;}
+.message-title ul{padding-left:00px;}
+.clearHeight{clear:both; line-height:20px; height:10px;}
+.clear{clear:both;}
+#add_new_license select, #add_new_insurance select{padding-left:0px; padding-right:0px; }
+#no_license_found td, #no_insurance_found td{text-align:center}
+/*.action-column {text-align:center;}
+.action-column a{text-align:center;}*/
+.action-column a, .action-column form{float:left}
+/*.action-column form{margin-left:5px}*/
+.modal-header {background: #ad103c;}
+.site-footer {background: #ad103c; color: #fff; padding: 10px 0;}
+
+.notification p{font-size:14px !important} 
+.notification p muted{font-size:10px !important} 
+.notification a{color:#ad103c; font-size:14px}
+.expired td{background-color:#FFC9D8 !important}
+#form_save_message{display: none}
+
+/*shashi */
+/* print & preview page */
+.lbl-width {width:100%;font-weight: bold;} 
+.bold{font-weight: bold;}
+.header-radio{border: 1px solid #000;padding:2px;width:98%;margin-left:10px;}
+.align-center{text-align: center;}

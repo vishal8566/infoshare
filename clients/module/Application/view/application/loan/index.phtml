@@ -1,0 +1,623 @@
+<?php
+$this->headScript()
+        ->offsetSetFile(97, $this->basePath() . '/public/js/jquery.validate.min.js');
+?>
+<section class="menu-section">   
+    <div class="container">   
+        <div class="row">     
+            <div class="col-md-12">      
+                <div class="navbar-collapse collapse ">      
+                    <ul id="menu-top" class="nav navbar-nav navbar-right">      
+                        <li><a href="<?php echo $this->url("search"); ?>"><?php echo $this->translate("Search Data"); ?></a></li>  					
+                        <li class="menu-top-active"><a href="<?php echo $this->url("loan"); ?>"><?php echo $this->translate("Loan"); ?></a></li> 
+                        <li><a href="<?php echo $this->url("discounting"); ?>"><?php echo $this->translate("Discounting"); ?></a></li>  
+                        <li><a href="<?php echo $this->url("support"); ?>"><?php echo $this->translate("Support"); ?></a></li>        
+                        <li><a href="<?php echo $this->url("report"); ?>"><?php echo $this->translate("Reporting"); ?></a></li>   
+                      <!--<li><a href="<?php //echo $this->url("history");  ?>"><?php //echo $this->translate("History");  ?></a></li>-->
+                      <hr class="no-display">
+                       <li class="no-display"><a href="<?php echo $this->url("loginfront", array("action" => "logout")) ?>">Logout</a></li>    
+                    </ul>     
+                </div>    
+            </div>   
+        </div> 
+    </div>
+</section>
+<div class="content-wrapper">  
+    <div class="container">   
+        <div class="row">    
+            <div class="col-md-12">
+                <?php if (empty($data)) { ?>
+                    <h4 class="page-head-line"><?php echo $this->translate("New Loan"); ?></h4>  
+                <?php } else { ?>
+                    <h4 class="page-head-line"><?php echo $this->translate("View Loan"); ?></h4>  
+                <?php } ?>
+            </div>  
+        </div>    
+        <div class="row">    
+            <div class="col-md-12 col-lg-12">   
+                <form class="loan_form" id="loan_form" action="<?php echo $this->url("loan", array("action" => "loanpost")) ?>" method="post">   
+                    <input type="hidden" name="deal_type" value="1" />  
+                    <div class="form-group">          
+                        <div class="row">
+                            <div class="col-md-4 col-lg-4 col-box-small">    
+                                <label><?php echo $this->translate("ID"); ?></label>    
+                                <input type="text" class="form-control candidate_id_LLC" value="<?php
+                                if (isset($data[0]['candidate_LLC_number'])) {
+                                    echo $data[0]['candidate_LLC_number'];
+                                }
+                                ?>" name="candidate_id_LLC" <?php
+                                       if (isset($data[0]['candidate_LLC_number'])) {
+                                           echo "readonly";
+                                       }
+                                       ?>/>
+                                <label class="error_LLC_invalid" style="display: none"></label>    
+                            </div>         
+                            <div class="col-md-4 col-lg-4 col-box-small">       
+                                <label><?php echo $this->translate("Name"); ?></label>                 
+                                <input type="text" class="form-control candidate_name"  name="candidate_name" value="<?php
+                                if (isset($data[0]['candidate_name'])) {
+                                    echo $data[0]['candidate_name'];
+                                }
+                                ?>" <?php
+                                       if (isset($data[0]['candidate_name'])) {
+                                           echo "readonly";
+                                       }
+                                       ?>/>	
+                                <label class="error_LLC" style="display: none"></label>      
+                            </div>          
+                            <div class="col-md-4 col-lg-4 col-box-small">       
+                                <label><?php echo $this->translate("Phone"); ?></label>                 
+                                <input type="text" class="form-control deal_phone"  onkeypress='return checkValue(event);'  name="deal_phone" value="<?php
+                                if (isset($data[0]['deal_phone'])) {
+                                    echo $data[0]['deal_phone'];
+                                }
+                                ?>"<?php
+                                       if (!empty($data)) {
+                                           echo "readonly";
+                                       }
+                                       ?>/>	
+                            </div>          
+                        </div>           
+                    </div>          
+                    <?php
+                    $compareDateFrom = date('d/n/Y', strtotime('first day of this month'));
+                    $date = $compareDateFrom;
+                    list($d, $m, $y) = explode('/', $date);
+                    $date2 = Date("d/n/Y", mktime(0, 0, 0, $m + 1, $d + 14, $y));
+
+                    // echo $date2; die;
+                    if (isset($data[0]['deal_due_date'])) {
+                        $date2 = $data[0]['deal_due_date'];
+                    }
+                    ?>
+                    <div class="form-group">    
+                        <div class="row">         
+                            <div class="col-md-4 col-lg-4 col-box-small">         
+                                <label><?php echo $this->translate("Amount"); ?></label>       
+                                <input type="number" class="form-control deal_amount" onkeypress='return checkValue(event);' name="deal_amount" value="<?php
+                                if (isset($data[0]['deal_amount'])) {
+                                    echo $data[0]['deal_amount'];
+                                }
+                                ?>" <?php
+                                       if (!empty($data)) {
+                                           echo "readonly";
+                                       }
+                                       ?>/>	
+                            </div> 
+                            <?php /*
+                              <div class="col-md-4 col-lg-4 col-box-small">
+                              <label><?php echo $this->translate("Payments"); ?></label>
+                              <input type="text" class="form-control deal_paymentCount" onkeypress='return checkValue(event);' name="deal_paymentCount" value="<?php
+                              if (isset($data[0]['deal_paymentCount'])) {
+                              echo $data[0]['deal_paymentCount'];
+                              }
+                              ?>" <?php
+                              if (!empty($data)) {
+                              echo "readonly";
+                              }
+                              ?> />
+                              </div> */ ?>    
+                            <div class="col-md-4 col-lg-4 col-box-small" style="display:none;">        
+                                <label><?php echo $this->translate("Start Date"); ?></label>            
+                                <input type="text" class="form-control deal_start_date" id="deal_start_date" onkeypress='return validateQty(event);' name="deal_start_date" value="<?php
+                                if (isset($data[0]['deal_start_date'])) {
+                                    echo $data[0]['deal_start_date'];
+                                } else {
+                                    echo date("d/m/Y");
+                                }
+                                ?>" <?php
+                                       if (!empty($data)) {
+                                           echo "readonly";
+                                       }
+                                       ?> />
+                            </div>      
+                            <div class="col-md-4 col-lg-4 col-box-small">      
+                                <label><?php echo $this->translate("Due Date"); ?></label>  
+                                <input type="hidden" class="date_hidden" value="<?php echo $date2; ?>" />
+                                <input type="text" class="form-control deal_due_date" onkeypress='return validateQty(event);'  value="<?php echo $date2; ?>" name="deal_due_date" id="due_date"/>	
+                            </div>     
+                        </div>           
+                    </div>              
+                    <div class="sub-head">         
+                        <h2><?php echo $this->translate("Surety"); ?></h2>          
+                    </div>      
+                    <div class="form-group">       
+                        <div class="row">                
+                            <div class="col-md-4 col-lg-4 col-box-small">    
+                                <label><?php echo $this->translate("ID"); ?></label>                   
+                                <input type="text" class="form-control deal_guarantor_1"  name="deal_guarantor_1" value="<?php
+                                if (isset($data[0]['deal_guarantor_1'])) {
+                                    echo $data[0]['deal_guarantor_1'];
+                                }
+                                ?>" <?php
+                                       if (!empty($data)) {
+                                           echo "readonly";
+                                       }
+                                       ?>/>
+                                <label class="error_LLC_invalid_1" style="display: none"></label>
+                            </div>    
+                            <div class="col-md-8 col-lg-8 col-box-big">         
+                                <label><?php echo $this->translate("Name"); ?></label>           
+                                <input type="text" class="form-control deal_guarantor_1_name"  name="deal_guarantor_1_name" value="<?php
+                                if (isset($data[0]['deal_guarantor_1_name'])) {
+                                    echo $data[0]['deal_guarantor_1_name'];
+                                }
+                                ?>" <?php
+                                       if (!empty($data)) {
+                                           echo "readonly";
+                                       }
+                                       ?>/>  
+                                <label class="error_LLC_1" style="display: none"></label>     
+                            </div>			
+                        </div>          
+                    </div>            
+                    <div class="form-group">      
+                        <div class="row">                 
+                            <div class="col-md-4 col-lg-4 col-box-small">   
+                                <label><?php echo $this->translate("ID"); ?></label>                 
+                                <input type="text" class="form-control deal_guarantor_2" name="deal_guarantor_2" value="<?php
+                                if (isset($data[0]['deal_guarantor_2'])) {
+                                    echo $data[0]['deal_guarantor_2'];
+                                }
+                                ?>" <?php
+                                       if (!empty($data)) {
+                                           echo "readonly";
+                                       }
+                                       ?>/>	
+                                <label class="error_LLC_invalid_2" style="display: none"></label>
+
+                            </div>             
+                            <div class="col-md-8 col-lg-8 col-box-big">     
+                                <label><?php echo $this->translate("Name"); ?></label>        
+
+                                <input type="text" class="form-control deal_guarantor_2_name"  name="deal_guarantor_2_name" value="<?php
+                                if (isset($data[0]['deal_guarantor_2_name'])) {
+                                    echo $data[0]['deal_guarantor_2_name'];
+                                }
+                                ?>" <?php
+                                       if (!empty($data)) {
+                                           echo "readonly";
+                                       }
+                                       ?>/>         
+                                <label class="error_LLC_2" style="display: none"></label> 
+                            </div>			
+                        </div>         
+                    </div>            
+
+                    <?php /*
+                      <div class="form-group">
+                      <div class="row">
+                      <div class="col-md-4 col-lg-4 col-box-small">
+                      <label><?php echo $this->translate("ID"); ?></label>
+                      <input type="text" class="form-control deal_guarantor_3"  name="deal_guarantor_3" value="<?php
+                      if (isset($data[0]['deal_guarantor_3'])) {
+                      echo $data[0]['deal_guarantor_3'];
+                      }
+                      ?>" <?php
+                      if (!empty($data)) {
+                      echo "readonly";
+                      }
+                      ?>/>
+                      <label class="error_LLC_invalid_3" style="display: none"></label>
+
+                      </div>
+                      <div class="col-md-8 col-lg-8 col-box-big">
+                      <label><?php echo $this->translate("Name"); ?></label>
+                      <input type="text" class="form-control deal_guarantor_3_name"  name="deal_guarantor_3_name" value="<?php
+                      if (isset($data[0]['deal_guarantor_3_name'])) {
+                      echo $data[0]['deal_guarantor_3_name'];
+                      }
+                      ?>" <?php
+                      if (!empty($data)) {
+                      echo "readonly";
+                      }
+                      ?>/>
+                      <label class="error_LLC_3" style="display: none"></label>
+                      </div>
+                      </div>
+                      </div>
+                     */ ?>
+                    <hr>       
+                    <div class="form-group">         
+                        <div class="row">        
+                            <div class="col-md-12 col-lg-12 col-box-com">     
+                                <label><?php echo $this->translate("Comments"); ?></label>                    
+                                <textarea class="form-control" rows="3" name="deal_comments" <?php
+                                if (!empty($data)) {
+                                    echo "readonly";
+                                }
+                                ?>><?php
+                                              if (isset($data[0]['deal_comments'])) {
+                                                  echo $data[0]['deal_comments'];
+                                              }
+                                              ?></textarea>	
+                            </div>		
+                        </div>              
+                    </div>   
+                    <?php if (empty($data[0])) : ?>
+                        <div class="form-group"> 
+                            <input type="submit" name="submit" class="btn submit-but loan_save" value="<?php echo $this->translate('SAVE'); ?>">     
+                            <input type="button" class="btn print-but clear" name="clear" value="<?php echo $this->translate('Clear'); ?>" />  
+                        </div>     
+                    <?php endif; ?>
+                    <?php if (!empty($data[0])) : ?>
+                        <div class="form-group">       
+                            <a href="<?php echo $this->url("history") ?>" class="btn submit-but"><?php echo $this->translate('BACK'); ?></a>
+                        </div>     
+                    <?php endif; ?>
+                </form>      
+            </div>   
+        </div>   
+    </div>
+</div>
+<div id="myModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title"><?php echo $this->translate("Confirmation"); ?></h4>
+            </div>
+            <div class="modal-body">
+                <p><?php echo $this->translate("Do you want to clear changes you made to document before closing?"); ?></p>
+                <p class="text-warning"><small><?php echo $this->translate("If you don't save, your changes will be lost"); ?>.</small></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="clear_btnn" data-dismiss="modal"><?php echo $this->translate("YES"); ?></button>
+                <button type="button" class="btn btn-primary" data-dismiss="modal"><?php echo $this->translate("NO"); ?></button>
+            </div>
+        </div>
+    </div>
+</div>
+<?php $url = $this->url("loan", array("action" => "getName")); ?>
+<?php
+//$date = cur_date;
+//list($d, $m, $y) = explode('/', $date);
+// $date3 = Date("d/m/Y", mktime(0, 0, 0, $m + pay, $d + 14, $y));
+?>
+
+<script>
+
+    var R_ELEGAL_INPUT = -1;
+    var R_NOT_VALID = -2;
+    var R_VALID = 1;
+    function validateQty(event) {
+        var key = window.event ? event.keyCode : event.which;
+
+        if (event.keyCode == 8 || event.keyCode == 46
+                || event.keyCode == 47 || event.keyCode == 39) {
+            return true;
+        }
+        else if (key < 47 || key > 57) {
+            return false;
+        }
+        else
+            return true;
+    }
+    function checkValue(event) {
+        var key = window.event ? event.keyCode : event.which;
+
+        if (event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 44
+                || event.keyCode == 46 || event.keyCode == 39) {
+            return true;
+        }
+        else if (key < 44 || key > 57) {
+            return false;
+        }
+        else
+            return true;
+    }
+
+    jQuery(document).ready(function() {
+        jQuery('#loan_form').on('keyup keypress', function(e) {
+            var keyCode = e.keyCode || e.which;
+            if (keyCode === 13) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+
+
+        //    jQuery(".deal_paymentCount").numeric();
+        //  jQuery(".deal_amount").numeric();
+//        var regExp = /[0-9\.\,]/;
+//        jQuery(".deal_paymentCount").on('keydown keyup', function (e) {
+//            var value = String.fromCharCode(e.which) || e.key;
+//            // Only numbers, dots and commas
+//            if (!regExp.test(value)
+//                    && e.which != 188 // ,
+//                    && e.which != 190 // .
+//                    && e.which != 8   // backspace
+//                    && e.which != 46  // delete
+//                    && (e.which < 37  // arrow keys
+//                            || e.which > 40)) {
+//                e.preventDefault();
+//                return false;
+//            }
+//        });
+//        jQuery(".deal_amount").on('keydown keyup', function (e) {
+//            var value = String.fromCharCode(e.which) || e.key;
+//            // Only numbers, dots and commas
+//            if (!regExp.test(value)
+//                    && e.which != 188 // ,
+//                    && e.which != 190 // .
+//                    && e.which != 8   // backspace
+//                    && e.which != 46  // delete
+//                    && (e.which < 37  // arrow keys
+//                            || e.which > 40)) {
+//                e.preventDefault();
+//                return false;
+//            }
+//        });
+        jQuery('.clear').click(function() {
+            jQuery("#myModal")
+                    .modal({backdrop: 'static', keyboard: true, show: true})
+                    .one('click', '#clear_btnn', function(e) {
+                        jQuery('#loan_form')[0].reset();
+                    });
+        });
+        jQuery('#due_date').datepicker({
+            format: "dd/m/yyyy"
+        });
+        jQuery('#deal_start_date').datepicker({
+            format: "dd/mm/yyyy"
+        });
+
+        jQuery(".deal_paymentCount").change(function() {
+            var cur_date = jQuery(".deal_due_date").val();
+            var pay = jQuery(".deal_paymentCount").val();
+            var hiden_date = jQuery(".date_hidden").val();
+            var ar = hiden_date.split("/");
+            var vall = ar[1] + "/" + ar[0] + "/" + ar[2];
+            var d = new Date(vall);
+            d.setMonth(d.getMonth( ) + parseInt(pay));
+            jQuery(".deal_due_date").val(d.getDate( ) + '/' + (d.getMonth( ) + 1) + '/' + d.getFullYear( ));
+        });
+
+        jQuery(".loan_save").click(function() {
+            jQuery(".error_LLC").hide();
+            jQuery(".error_LLC_1").hide();
+            jQuery(".error_LLC_2").hide();
+            ///         jQuery(".error_LLC_3").hide();
+            if (jQuery(".deal_guarantor_1").val() == "") {
+                jQuery(".deal_guarantor_1_name").removeAttr('required');
+            }
+            if (jQuery(".deal_guarantor_2").val() == "") {
+                jQuery(".deal_guarantor_2_name").removeAttr('required');
+            }
+//            if (jQuery(".deal_guarantor_3").val() == "") {
+//                jQuery(".deal_guarantor_3_name").removeAttr('required');
+//            }
+        });
+        jQuery.validator.addMethod("DateFormat", function(value, element) {
+            return value.match(/^(0[1-9]|[12][0-9]|3[01])[- //.]([1-9]|1[012])[- //.](19|20)\d\d$/);
+        },
+                "<?php echo $this->translate('Please enter a date in the format dd/mm/yyyy'); ?>"
+                );
+        jQuery("#loan_form").validate({
+            rules: {
+                candidate_id_LLC: "required",
+               // deal_phone: "required",
+//                deal_phone:{
+  //                  required: true,
+    //                number: true
+      //          },
+                deal_due_date: {
+                    required: true,
+                    DateFormat: true
+                },
+                deal_amount: "required",
+                deal_amount:{
+                    required: true,
+                    number: true
+                },
+            },
+            messages: {
+                candidate_id_LLC: "<?php echo $this->translate('Please enter LLC Number'); ?>",
+                deal_amount: "<?php echo $this->translate('Please enter due amount'); ?>",
+                deal_amount: "<?php echo $this->translate('Please enter only digits'); ?>",
+                        deal_phone: "<?php echo $this->translate('Please enter phone number'); ?>",
+              //  deal_phone: "<?php echo $this->translate('Please enter only digits'); ?>",
+            }
+        });
+        jQuery(".candidate_id_LLC").change(function() {
+            var candidate_id_LLC = jQuery(".candidate_id_LLC").val();
+            var abc = ValidateID(candidate_id_LLC);
+            console.log(abc);
+            if (abc != 1) {
+                jQuery(".error_LLC_invalid").html("Invalid ID");
+                jQuery(".error_LLC_invalid").show();
+                jQuery(".loan_save").prop("disabled", true);
+            } else {
+                jQuery(".error_LLC_invalid").hide();
+                jQuery(".loan_save").removeAttr("disabled", true);
+            }
+            jQuery.ajax({
+                type: "POST",
+                url: "<?php echo $url; ?>",
+                data: {"candidate_id_LLC": candidate_id_LLC},
+                async: true,
+                dataType: "json",
+                success: function(dta) {
+                    if (dta.message == "true") {
+                        jQuery(".candidate_name").val(dta.name);
+                        jQuery(".candidate_name").prop('readonly', true);
+                        jQuery(".error_LLC").hide();
+                    } else {
+                        jQuery(".error_LLC").html(dta.message);
+                        jQuery(".candidate_name").val(dta.name);
+                        jQuery(".candidate_name").removeAttr("readonly");
+                        jQuery(".error_LLC").show();
+                    }
+                },
+            });
+        });
+        jQuery(".deal_guarantor_1").change(function() {
+            var candidate_id_LLC = jQuery(".deal_guarantor_1").val();
+            var abc = ValidateID(candidate_id_LLC);
+            if (abc != 1) {
+                jQuery(".error_LLC_invalid_1").html("Invalid ID");
+                jQuery(".error_LLC_invalid_1").show();
+                jQuery(".loan_save").prop("disabled", true);
+            } else {
+                jQuery(".error_LLC_invalid_1").hide();
+                jQuery(".loan_save").removeAttr("disabled", true);
+            }
+            if (candidate_id_LLC == "") {
+                jQuery(".error_LLC_invalid_1").hide();
+                jQuery(".error_LLC_1").hide();
+                jQuery(".loan_save").removeAttr("disabled", true);
+            }
+
+            jQuery.ajax({
+                type: "POST",
+                url: "<?php echo $url; ?>",
+                data: {"candidate_id_LLC": candidate_id_LLC},
+                async: true,
+                dataType: "json",
+                success: function(dta) {
+                    if (dta.message == "true") {
+                        jQuery(".deal_guarantor_1_name").val(dta.name);
+                        jQuery(".error_LLC_1").hide();
+                    } else {
+
+                        jQuery(".error_LLC_1").html(dta.message);
+                        jQuery(".deal_guarantor_1_name").prop('required', true);
+                        jQuery(".error_LLC_1").show();
+                    }
+                },
+            });
+        });
+        jQuery(".deal_guarantor_2").change(function() {
+            var candidate_id_LLC = jQuery(".deal_guarantor_2").val();
+            var abc = ValidateID(candidate_id_LLC);
+            if (abc != 1) {
+                jQuery(".error_LLC_invalid_2").html("Invalid ID");
+                jQuery(".error_LLC_invalid_2").show();
+                jQuery(".loan_save").prop("disabled", true);
+            } else {
+                jQuery(".error_LLC_invalid_2").hide();
+                jQuery(".loan_save").removeAttr("disabled", true);
+            }
+            if (candidate_id_LLC == "") {
+                jQuery(".error_LLC_invalid_2").hide();
+                jQuery(".error_LLC_2").hide();
+                jQuery(".loan_save").removeAttr("disabled", true);
+            }
+            jQuery.ajax({
+                type: "POST",
+                url: "<?php echo $url; ?>",
+                data: {"candidate_id_LLC": candidate_id_LLC},
+                async: true,
+                dataType: "json",
+                success: function(dta) {
+                    if (dta.message == "true") {
+                        jQuery(".deal_guarantor_2_name").val(dta.name);
+                        jQuery(".error_LLC_2").hide();
+                    } else {
+                        jQuery(".error_LLC_2").html(dta.message);
+                        jQuery(".deal_guarantor_2_name").prop('required', true);
+                        jQuery(".error_LLC_2").show();
+                    }
+                },
+            });
+        });
+//        jQuery(".deal_guarantor_3").change(function() {
+//            var candidate_id_LLC = jQuery(".deal_guarantor_3").val();
+//            var abc = ValidateID(candidate_id_LLC);
+//            if (abc != 1) {
+//                jQuery(".error_LLC_invalid_3").html("Invalid ID/LLC number");
+//                jQuery(".error_LLC_invalid_3").show();
+//                jQuery(".loan_save").prop("disabled", true);
+//            } else {
+//                jQuery(".error_LLC_invalid_3").hide();
+//                jQuery(".loan_save").removeAttr("disabled", true);
+//            }
+//            if (candidate_id_LLC == "") {
+//                jQuery(".error_LLC_invalid_3").hide();
+//                jQuery(".error_LLC_3").hide();
+//                jQuery(".loan_save").removeAttr("disabled", true);
+//            }
+//            jQuery.ajax({
+//                type: "POST",
+//                url: "<?php echo $url; ?>",
+//                data: {"candidate_id_LLC": candidate_id_LLC},
+//                async: true,
+//                dataType: "json",
+//                success: function(dta) {
+//                    if (dta.message == "true") {
+//                        jQuery(".deal_guarantor_3_name").val(dta.name);
+//                        jQuery(".error_LLC_3").hide();
+//                    } else {
+//                        jQuery(".error_LLC_3").html(dta.message);
+//                        jQuery(".deal_guarantor_3_name").prop('required', true);
+//                        jQuery(".error_LLC_3").show();
+//                    }
+//                },
+//            });
+//        });
+    });
+
+    function ValidateID(str)
+    {
+        //INPUT VALIDATION
+
+        // Just in case -> convert to string
+        var IDnum = String(str);
+
+        // Validate correct input
+        if ((IDnum.length > 9) || (IDnum.length < 5))
+            return R_ELEGAL_INPUT;
+        if (isNaN(IDnum))
+            return R_ELEGAL_INPUT;
+
+        // The number is too short - add leading 0000
+        if (IDnum.length < 9)
+        {
+            while (IDnum.length < 9)
+            {
+                IDnum = '0' + IDnum;
+            }
+        }
+
+        // CHECK THE ID NUMBER
+        var mone = 0, incNum;
+        console.log("IDnum===" + IDnum);
+
+        for (var i = 0; i < 9; i++)
+        {
+            incNum = Number(IDnum.charAt(i));
+            incNum *= (i % 2) + 1;
+            if (incNum > 9)
+                incNum -= 9;
+            mone += incNum;
+            console.log("incNum===" + incNum);
+        }
+        console.log("mone===" + mone);
+        if (mone % 10 == 0)
+            return R_VALID;
+        else
+            return R_NOT_VALID;
+    }
+
+</script>

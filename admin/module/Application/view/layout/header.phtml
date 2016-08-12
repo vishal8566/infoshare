@@ -1,0 +1,30 @@
+<div class="navbar navbar-inverse set-radius-zero">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="<?php echo $this->url("home"); ?>">
+                <h2 class="logo-text">מסך מנהלים</h2>
+            </a>
+        </div>
+        <div class="left-div">
+            <div class="user-settings-wrapper">
+                <ul class="nav">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle user-prof" data-toggle="dropdown" href="#" aria-expanded="false">
+                            <i class="fa fa-caret-down arrow-icon" aria-hidden="true"></i> <i class="fa fa-user user-icon" aria-hidden="true"></i><?php echo $this->translate("Welcome"); ?> <?php echo @$loggedInApplicationUser['user_name']; //$this->translate("Manager");   ?>
+                        </a>
+                        <div class="dropdown-menu dropdown-settings">                              
+                            <a href="<?php echo $this->url("loginfront", array("action" => "logout")) ?>" class="btn btn-danger btn-sm">
+                                <?php echo $this->translate("Logout"); ?></a>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

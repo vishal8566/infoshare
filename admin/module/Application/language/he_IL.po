@@ -1,0 +1,493 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Admin\n"
+"POT-Creation-Date: 2016-07-12 14:52+0530\n"
+"PO-Revision-Date: 2016-07-14 10:19+0530\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: he_IL\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: C:\\wamp\\www\\php\\infoshare\\module\\Admin\\view\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: translate;__\n"
+"X-Poedit-SearchPath-0: C:\\wamp\\www\\php\\infoshare\\module\\Admin\\view\n"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:8
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:35
+msgid "New Client"
+msgstr "לקוח חדש"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:18
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:50
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:62
+msgid "Office Name"
+msgstr "שם"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:28
+msgid "ID / LLC"
+msgstr "ת.ז."
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:41
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:72
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:85
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:48
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:60
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:73
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:85
+msgid "Phone"
+msgstr "טלפון"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:49
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:47
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:59
+msgid "Address"
+msgstr "כתובת"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:61
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:46
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:58
+msgid "Contact Name"
+msgstr "איש קשר"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:69
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:45
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:57
+msgid "Email"
+msgstr "אימייל"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:81
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:44
+msgid "Password"
+msgstr "סיסמא"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:85
+msgid "Confirm Password"
+msgstr "אישור סיסמא"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:93
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:70
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:83
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:41
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:56
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:68
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:80
+msgid "Status"
+msgstr "סטטוס"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:95
+msgid "Active"
+msgstr "פָּעִיל"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:96
+msgid "Inactive"
+msgstr "לֹא פָּעִיל"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:102
+msgid "SAVE"
+msgstr "שמירה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:103
+msgid "Back"
+msgstr "חזור"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:173
+msgid "Please enter LLC Number"
+msgstr "אנא הכנס ת.ז. או ח.פ."
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:174
+msgid "Please enter Office Name"
+msgstr "אנא הכנס שם משרד"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:175
+msgid "Please enter Address"
+msgstr "אנא הזן כתובת"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:176
+msgid "Please enter Contact Name"
+msgstr "אנא הכנס שם איש קשר"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:177
+msgid "Please enter vaild email address"
+msgstr "אנא הכנס כתובת מייל תקינה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/client/index.phtml:178
+msgid "Please enter only digits"
+msgstr "מספרים בלבד"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:10
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:14
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:28
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:14
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:10
+msgid "Clients"
+msgstr "לקוח"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:11
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:15
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:15
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:11
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:24
+msgid "Statistics"
+msgstr "סטטיסטיקה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:12
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:24
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:16
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:16
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:12
+msgid "Deals"
+msgstr "עסקאות"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:13
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:17
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:17
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:28
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:97
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:13
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:72
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:84
+msgid "Loan"
+msgstr "הלוואה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:37
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:37
+msgid "From"
+msgstr "מתאריך"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:47
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:47
+msgid "To"
+msgstr "עד"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:58
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:58
+msgid "Show"
+msgstr "הצג"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:68
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:81
+msgid "End Date"
+msgstr "תאריך סיום"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:69
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:82
+msgid "Start Date"
+msgstr "תאריך התחלה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:71
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:84
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:44
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:59
+msgid "Type"
+msgstr "סוג"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:73
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:86
+msgid "Name"
+msgstr "שם"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:74
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:87
+msgid "Id"
+msgstr "מזהה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:75
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:88
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:74
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:86
+msgid "Office"
+msgstr "משרד"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:76
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:89
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:51
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:63
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:49
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:64
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:75
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:87
+msgid "#"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:167
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:116
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:155
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:177
+msgid "Display"
+msgstr "תצוגה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:167
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:116
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:155
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:177
+msgid "entries"
+msgstr "רשומות"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:168
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:117
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:156
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:178
+msgid "No data found"
+msgstr "לא נמצאו נתונים"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:169
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:118
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:157
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:179
+msgid "Showing page"
+msgstr "מציג"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:170
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:119
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:158
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:180
+msgid "filtered from"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:170
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:119
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:158
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:180
+msgid "total records"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:172
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:121
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:182
+msgid "Previous"
+msgstr "קודם"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/deal/index.phtml:173
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:122
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:183
+msgid "Next"
+msgstr "הבא"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:49
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:61
+msgid "ID/LLC"
+msgstr "ת.ז."
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/index/index.phtml:70
+msgid "Change"
+msgstr "לשנות"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:40
+msgid "Update"
+msgstr "עדכון"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:42
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:57
+msgid "Due date"
+msgstr "עד לתאריך"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:43
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:58
+msgid "Start date"
+msgstr "תאריך התחלה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:45
+msgid "Loan&nbsp;Amount"
+msgstr "סכום"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:46
+msgid "LLC&nbsp;Number"
+msgstr "ת.ז. / ח.פ"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:47
+msgid "Candidate&nbsp;Name"
+msgstr "שם הלווה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:48
+msgid "User&nbsp;Office&nbsp;Name"
+msgstr "שם משתמש"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:60
+msgid "Loan amount"
+msgstr "סכום"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:61
+msgid "LLC number"
+msgstr "ת.ז. / ח.פ"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:62
+msgid "Candidate name"
+msgstr "שם הלווה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:63
+msgid "User office name"
+msgstr "שם משתמש"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:75
+msgid "Approv"
+msgstr "לְאַשֵׁר"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:80
+msgid "Reject"
+msgstr "לִדחוֹת"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:86
+msgid "Pending"
+msgstr "ממתין לאישור"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:88
+msgid "Approved"
+msgstr "מאושר"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:90
+msgid "Rejected"
+msgstr "נִדחֶה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loanadmin/index.phtml:99
+msgid "Dicounting"
+msgstr "נכיון"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loginadmin/index.phtml:26
+msgid "Please Login To Enter"
+msgstr "אנא התחבר"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loginadmin/index.phtml:33
+msgid "Enter Email ID"
+msgstr "הכנס אימייל"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loginadmin/index.phtml:37
+msgid "Enter Password"
+msgstr "הכנס סיסמא"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loginadmin/index.phtml:42
+msgid "Remember Me"
+msgstr "זכור אותי"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loginadmin/index.phtml:45
+msgid "Login"
+msgstr "כניסה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loginadmin/index.phtml:64
+msgid "Please enter email"
+msgstr "חסר אימייל"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/loginadmin/index.phtml:65
+msgid "Please enter password"
+msgstr "הכנסה סיסמא"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:69
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:81
+msgid "Searches"
+msgstr "חיפושים"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:70
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:82
+msgid "Total"
+msgstr "סה\"כ"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:71
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:83
+msgid "Discounting"
+msgstr "נכיון"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:95
+msgid "No Contribution"
+msgstr "אין תרומה"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:97
+msgid "Not Ok"
+msgstr "לא בסדר"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/admin/statistics/index.phtml:99
+msgid "Ok"
+msgstr "בסדר"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:1
+msgid "A 404 error occurred"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:10
+msgid "The requested controller was unable to dispatch the request."
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:13
+msgid ""
+"The requested controller could not be mapped to an existing controller class."
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:16
+msgid "The requested controller was not dispatchable."
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:19
+msgid "The requested URL could not be matched by routing."
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:22
+msgid "We cannot determine at this time why a 404 was generated."
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:34
+msgid "Controller"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:41
+#, php-format
+msgid "resolves to %s"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:53
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/index.phtml:8
+msgid "Additional information"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:56
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:80
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/index.phtml:11
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/index.phtml:35
+msgid "File"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:60
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:84
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/index.phtml:15
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/index.phtml:39
+msgid "Message"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:64
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:88
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/index.phtml:19
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/index.phtml:43
+msgid "Stack trace"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:74
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/index.phtml:29
+msgid "Previous exceptions"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/404.phtml:103
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/index.phtml:58
+msgid "No Exception available"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/error/index.phtml:1
+msgid "An error occurred"
+msgstr ""
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/layout/header.phtml:18
+msgid "Welcome"
+msgstr "ברוך הבא"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/layout/header.phtml:22
+msgid "Dashboard"
+msgstr "ראשי"
+
+#: C:\wamp\www\php\infoshare\module\Admin\view/layout/header.phtml:24
+msgid "Logout"
+msgstr "יציאה"
+
+#~ msgid "of"
+#~ msgstr "שֶׁל"
+
+#~ msgid "Manager"
+#~ msgstr "מנהל"

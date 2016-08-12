@@ -1,0 +1,87 @@
+<?php
+$this->headScript()
+        ->offsetSetFile(97, $this->basePath() . '/public/js/jquery.validate.min.js')
+?>
+<div class="navbar navbar-inverse set-radius-zero">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>                
+            </button>
+            <a class="navbar-brand" href="<?php echo $this->url(); ?>">
+                <h2 class="logo-text"> כניסת מנהלים</h2>
+            </a>            
+        </div>
+    </div>
+</div>
+<!-- LOGO HEADER END-->
+
+<!-- MENU SECTION END-->
+<div class="content-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="page-head-line"><?php echo $this->translate("Please Login To Enter"); ?> </h4>
+            </div>
+        </div>
+        <form class="form-login" id="submit-form" method="post" action="<?php echo $this->url("loginfront", array("action" => "loginpost")); ?>">
+            <div class="row">
+                <div class="col-md-6 login-box">    
+                    <div class="form-group col-login-box">              
+                        <label><?php echo $this->translate("Enter Email ID"); ?> </label>
+                        <input type="text" class="form-control" name="user_email" data-rule-required="true" data-rule-email="true" data-msg-required="Please enter email" autofocus  value="<?php echo isset($my_cookie_array['user_data']->user_email) ? $my_cookie_array['user_data']->user_email : ""; ?>" />
+                    </div>
+                    <div class="form-group col-login-box">  
+                        <label><?php echo $this->translate("Enter Password"); ?>  </label>
+                        <input type="password" class="form-control" name="user_password" data-rule-required="true" data-msg-required="Please enter password" value="<?php echo isset($my_cookie_array['user_data']->user_password) ? $my_cookie_array['user_data']->user_password : ""; ?>"/>
+                    </div>
+                    <div class="checkbox login-checkbox">
+                        <label><input type="checkbox" name="remember_me" <?php if (isset($my_cookie_array['user_data']->remember_me) && $my_cookie_array['user_data']->remember_me != NULL) { ?> checked="checked" <?php } ?>> 
+                            &nbsp; <?php echo $this->translate("Remember Me"); ?> </label>
+                    </div>
+                    <hr />
+                    <input type="submit" name="submit" class="btn btn-info login-btn" value="<?php echo $this->translate('Login'); ?>" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<!-- CONTENT-WRAPPER SECTION END-->
+<script>
+
+    jQuery(document).ready(function() {
+        jQuery("#submit-form").validate({
+            rules: {
+                user_email: {
+                    required: true,
+                    email: true
+                },
+                user_password: "required",
+            },
+            messages: {
+                user_email: "<?php echo $this->translate("Please enter email"); ?>",
+                        user_password: "<?php echo $this->translate('Please enter password'); ?>",
+            }
+        });
+        jQuery(".login-btn").click(function() {
+            if (jQuery("#submit-form").valid()) {
+                jQuery("#submit-form").submit();
+            }
+        });
+
+    });
+
+</script>
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                &copy; Copyright 2016 YourCompany | All Right Reserved.                
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,247 @@
+<?php
+$this->headScript()->offsetSetFile(97, $this->basePath() . '/public/js/jquery.validate.min.js');
+?>
+<div class="content-wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h4 class="page-head-line"><?php echo $this->translate("New Client"); ?></h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-lg-12">
+                <form class="loan_form" id="loan_form" action="<?php echo $this->url("client", array("action" => "update")) ?>" method="post">   
+                    <input type="hidden" name="user_id" value="<?php echo isset($client['user_id']) ? $client['user_id'] : ""; ?>" />
+                    <div class="form-group">          
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-box-small">       
+                                <label><?php echo $this->translate("Office Name"); ?></label>                 
+                                <input type="text" class="form-control user_office_name"  name="user_office_name" value="<?php echo isset($client['user_office_name']) ? $client['user_office_name'] : ""; ?>" <?php
+                                if (isset($client['user_office_name'])) {
+                                    //  echo 'readonly';
+                                }
+                                ?>
+                                       />
+                            </div>
+
+                            <div class = "col-md-6 col-lg-6 col-box-small">
+                                <label><?php echo $this->translate("ID / LLC"); ?></label>    
+                                <input type="text" class="form-control user_id_LLC" name="user_id_LLC" value="<?php echo isset($client['user_id_LLC']) ? $client['user_id_LLC'] : ""; ?>" <?php
+                                if (isset($client['user_id_LLC'])) {
+                                    //  echo 'readonly';
+                                }
+                                ?>  />
+                                <label class="error_LLC_invalid" style="display: none"></label>    
+                            </div>         
+                        </div>           
+                    </div>          
+                    <div class="form-group">          
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-box-small">       
+                                <label><?php echo $this->translate("Phone"); ?></label>                 
+                                <input type="text" class="form-control user_phone" onkeypress='return checkValue(event);'  name="user_phone" value="<?php echo isset($client['user_phone']) ? $client['user_phone'] : ""; ?>" <?php
+                                if (isset($client['user_phone'])) {
+                                    // echo 'readonly';
+                                }
+                                ?>/>	
+                            </div>          
+                            <div class="col-md-6 col-lg-6 col-box-small">    
+                                <label><?php echo $this->translate("Address"); ?></label>    
+                                <input type="text" class="form-control user_address" name="user_address" value="<?php echo isset($client['user_address']) ? $client['user_address'] : ""; ?>" <?php
+                                if (isset($client['user_address'])) {
+                                    //  echo 'readonly';
+                                }
+                                ?> />
+                            </div>         
+                        </div>           
+                    </div>          
+                    <div class="form-group">          
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-box-small">       
+                                <label><?php echo $this->translate("Contact Name"); ?></label>                 
+                                <input type="text" class="form-control user_contact_name"  name="user_contact_name" value="<?php echo isset($client['user_contact_name']) ? $client['user_contact_name'] : ""; ?>" <?php
+                                if (isset($client['user_contact_name'])) {
+                                    //  echo 'readonly';
+                                }
+                                ?>/>	
+                            </div>          
+                            <div class="col-md-6 col-lg-6 col-box-small">    
+                                <label><?php echo $this->translate("Email"); ?></label>    
+                                <input type="text" class="form-control user_email" name="user_email" value="<?php echo isset($client['user_email']) ? $client['user_email'] : ""; ?>" <?php
+                                if (isset($client['user_email'])) {
+                                    // echo 'readonly';
+                                }
+                                ?> />
+                            </div>         
+                        </div>           
+                    </div>          
+                    <div class="form-group">          
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-box-small">       
+                                <label><?php echo $this->translate("Password"); ?></label>                 
+                                <input type="password" class="form-control user_password"  name="user_password" value="<?php echo isset($client['user_password']) ? $client['user_password'] : ""; ?>" />	
+                            </div>          
+                            <div class="col-md-6 col-lg-6 col-box-small">    
+                                <label><?php echo $this->translate("Confirm Password"); ?></label>    
+                                <input type="password" class="form-control user_confirm_password" name="user_confirm_password"  />
+                            </div>         
+                        </div>           
+                    </div> 
+                    <div class="form-group">          
+                        <div class="row">
+                            <div class="col-md-6 col-lg-6 col-box-small">    
+                                <label><?php echo $this->translate("Status"); ?></label>    
+                                <select name="status" class="form-control">
+                                    <option value="1" <?php if (@$client['status'] == '1') {
+                                           echo "selected==selected";
+                                       } ?>><?php echo $this->translate('Active'); ?></option>
+                                    <option value="0" <?php if (@$client['status'] == '0') {
+                                           echo "selected==selected";
+                                       } ?>><?php echo $this->translate('Inactive'); ?></option>
+                                </select>
+                            </div>   
+                        </div>							
+                    </div>           
+
+                    <div class="form-group"> 
+                        <div class="row">
+                            <div class="col-md-12">
+                                <input type="submit" name="submit" class="btn submit-but loan_save" value="<?php echo $this->translate('SAVE'); ?>">     
+                                <a href="<?php echo $this->url("home"); ?>"><input type="button" class="btn print-but clear" name="clear" value="<?php echo $this->translate('Back'); ?>" /></a>
+                            </div>
+                        </div> 
+                    </div>
+            </div>  
+            </form>   
+        </div>
+    </div>
+</div>
+</div>
+<script>
+
+    var R_ELEGAL_INPUT = -1;
+    var R_NOT_VALID = -2;
+    var R_VALID = 1;
+    function validateQty(event) {
+        var key = window.event ? event.keyCode : event.which;
+
+        if (event.keyCode == 8 || event.keyCode == 46
+                || event.keyCode == 47 || event.keyCode == 39) {
+            return true;
+        }
+        else if (key < 47 || key > 57) {
+            return false;
+        }
+        else
+            return true;
+    }
+    function checkValue(event) {
+        var key = window.event ? event.keyCode : event.which;
+
+        if (event.keyCode == 8 || event.keyCode == 9 || event.keyCode == 44
+                || event.keyCode == 46 || event.keyCode == 39) {
+            return true;
+        }
+        else if (key < 44 || key > 57) {
+            return false;
+        }
+        else
+            return true;
+    }
+
+    jQuery(document).ready(function() {
+        jQuery('#loan_form').on('keyup keypress', function(e) {
+            var keyCode = e.keyCode || e.which;
+            if (keyCode === 13) {
+                e.preventDefault();
+                return false;
+            }
+        });
+        jQuery("#loan_form").validate({
+            rules: {
+                user_id_LLC: "required",
+                user_office_name: "required",
+                user_address: "required",
+                user_phone: {
+                    required: true,
+                    number: true
+                },
+                user_email: {
+                    required: true,
+                    email: true
+                },
+                user_contact_name: "required",
+                user_password: {
+                    minlength: 5
+                },
+                user_confirm_password: {
+                    minlength: 5,
+                    equalTo: '[name="user_password"]'
+                }
+            },
+            messages: {
+                user_id_LLC: "<?php echo $this->translate('Please enter LLC Number'); ?>",
+                user_office_name: "<?php echo $this->translate('Please enter Office Name'); ?>",
+                user_address: "<?php echo $this->translate('Please enter Address') ?>",
+                user_contact_name: "<?php echo $this->translate('Please enter Contact Name'); ?>",
+                user_email: '<?php echo $this->translate("Please enter vaild email address"); ?>',
+                user_phone: "<?php echo $this->translate('Please enter only digits'); ?>",
+            }
+        });
+        jQuery(".user_id_LLC").change(function() {
+            var candidate_id_LLC = jQuery(".user_id_LLC").val();
+            var abc = ValidateID(candidate_id_LLC);
+            if (abc != 1) {
+                jQuery(".error_LLC_invalid").html("Invalid ID");
+                jQuery(".error_LLC_invalid").show();
+                jQuery(".loan_save").prop("disabled", true);
+            } else {
+                jQuery(".error_LLC_invalid").hide();
+                jQuery(".loan_save").removeAttr("disabled", true);
+            }
+        });
+    });
+
+    function ValidateID(str)
+    {
+        //INPUT VALIDATION
+
+        // Just in case -> convert to string
+        var IDnum = String(str);
+
+        // Validate correct input
+        if ((IDnum.length > 9) || (IDnum.length < 5))
+            return R_ELEGAL_INPUT;
+        if (isNaN(IDnum))
+            return R_ELEGAL_INPUT;
+
+        // The number is too short - add leading 0000
+        if (IDnum.length < 9)
+        {
+            while (IDnum.length < 9)
+            {
+                IDnum = '0' + IDnum;
+            }
+        }
+
+        // CHECK THE ID NUMBER
+        var mone = 0, incNum;
+        console.log("IDnum===" + IDnum);
+
+        for (var i = 0; i < 9; i++)
+        {
+            incNum = Number(IDnum.charAt(i));
+            incNum *= (i % 2) + 1;
+            if (incNum > 9)
+                incNum -= 9;
+            mone += incNum;
+            console.log("incNum===" + incNum);
+        }
+        console.log("mone===" + mone);
+        if (mone % 10 == 0)
+            return R_VALID;
+        else
+            return R_NOT_VALID;
+    }
+
+</script>

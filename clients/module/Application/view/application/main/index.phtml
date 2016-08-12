@@ -1,0 +1,94 @@
+<section class="menu-section"> 
+    <div class="container">  
+        <div class="row">   
+            <div class="col-md-12"> 
+                <div class="navbar-collapse collapse ">   
+                    <ul id="menu-top" class="nav navbar-nav navbar-right">   
+                        <?php /* <li class="menu-top-active"><a href="<?php echo $this->url(); ?>"><?php echo $this->translate("Main"); ?></a></li> */ ?>    
+                        <li><a href="<?php echo $this->url("loan"); ?>"><?php echo $this->translate("Loan"); ?></a></li> 
+                        <li><a href="<?php echo $this->url("discounting"); ?>"><?php echo $this->translate("Discounting"); ?></a></li>            
+                        <li><a href="<?php echo $this->url("search"); ?>"><?php echo $this->translate("Search Data"); ?></a></li>   
+                        <li><a href="<?php echo $this->url("support"); ?>"><?php echo $this->translate("Support"); ?></a></li>           
+                        <li><a href="<?php echo $this->url("report"); ?>"><?php echo $this->translate("Reporting"); ?></a></li>     
+                       <!--<li><a href="<?php echo $this->url("history"); ?>"><?php echo $this->translate("History"); ?></a></li>-->  
+                        <li><hr></li>
+                        <li class="no-display"><a href="<?php echo $this->url("main"); ?>"><?php echo $this->translate("Dashboard"); ?></a></li>
+                        <li class="no-display"><a href="<?php echo $this->url("loginfront", array("action" => "logout")) ?>"><?php echo $this->translate("Logout"); ?></a></li>
+                    </ul>           
+                </div>   
+            </div>    
+        </div>  
+    </div>
+</section>
+<div class="clearfix"></div>
+<div class="user-name-active">
+    <div class="container"> 
+        <h3><i class="fa fa-user user-icon" aria-hidden="true"></i><?php echo $this->translate("Welcome"); ?> <?php echo $userData['user_fullname']; ?></h3>
+    </div>
+</div>
+
+<div class="content-wrapper">
+    <div class="container">
+        <div class="row">	
+            <div class="col-md-12">                
+                <h4 class="page-head-line"><?php echo $this->translate("NBFI System"); ?></h4>            
+            </div>  
+        </div>		
+        <div class="row">            
+            <div class="col-md-12 col-sm-12 col-xs-12">                
+                <div class="news-main-box bk-clr-two dashboard-div-wrapper">
+                    <div class="news-box">
+                        <h2><?php echo $this->translate("Currency rates"); ?></h2>
+
+                        <Iframe width = "100%" height = "620" frameborder = "0" scrolling = "no" marginheight = "0" marginwidth = "0" src = "http://expertinvest.co.il/calc/rate.php?en=1"> </iframe>
+
+                    </div>
+                    <div class="news-box">
+                        <h2><?php echo $this->translate("RSS FEED"); ?></h2>
+                        <div id="exTab3" class="container1">	
+                            <ul  class="nav nav-pills">
+                                <li class="active">
+                                    <a  href="#1b" data-toggle="tab"><?php echo $this->translate("Consumer and market share"); ?></a>
+                                </li>
+                                <li><a href="#2b" data-toggle="tab"><?php echo $this->translate("Accountability"); ?></a>
+                                </li>
+                                <li><a href="#3b" data-toggle="tab"><?php echo $this->translate("Wall Street and world markets"); ?></a>
+                                </li>
+                            </ul>
+
+                            <div class="tab-content clearfix">
+                                <div class="tab-pane active" id="1b">
+                                    <ul>
+                                        <?php foreach ($rssData1['entries'] as $data): ?>
+                                            <li><a href="<?php echo $data['link']; ?>" target="_blank"><?php echo $data['title']; ?></a></li>
+                                        <?php endforeach; ?>
+
+                                    </ul>
+                                </div>
+                                <div class="tab-pane" id="2b">
+                                    <ul>
+                                        <?php foreach ($rssData2['entries'] as $data): ?>
+                                            <li><a href="<?php echo $data['link']; ?>" target="_blank"><?php echo $data['title']; ?></a></li>
+                                        <?php endforeach; ?>
+
+                                    </ul>      
+                                </div>
+                                <div class="tab-pane" id="3b">
+                                    <ul>
+                                        <?php foreach ($rssData3['entries'] as $data): ?>
+                                            <li><a href="<?php echo $data['link']; ?>" target="_blank"><?php echo $data['title']; ?></a></li>
+                                        <?php endforeach; ?>
+
+                                    </ul>   
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>                
+
+        </div>    
+    </div>
+</div>
